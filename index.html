@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Auth Test App</title>
+
+<style>
+body{
+    font-family: Arial;
+    background:#f5f5f5;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    width:350px;
+    box-shadow:0 2px 10px rgba(0,0,0,.2);
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    margin-bottom:15px;
+    box-sizing:border-box;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    cursor:pointer;
+}
+
+#message{
+    margin-top:20px;
+    font-weight:bold;
+    text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h2>Login</h2>
+
+    <label>Email/Username</label>
+    <input id="username" type="text">
+
+    <label>Password</label>
+    <input id="password" type="password">
+
+    <button onclick="login()">Login</button>
+
+    <div id="message"></div>
+</div>
+
+<script>
+function login(){
+
+    const user =
+        document.getElementById("username").value;
+
+    const pass =
+        document.getElementById("password").value;
+
+    const msg =
+        document.getElementById("message");
+
+    if(
+        user === "default@test.com" &&
+        pass === "default123"
+    ){
+        msg.innerHTML =
+            "WELCOME DEFAULT USER<br>LOGIN SUCCESSFUL";
+        return;
+    }
+
+    if(
+        user === "override@test.com" &&
+        pass === "override123"
+    ){
+        msg.innerHTML =
+            "WELCOME OVERRIDE USER<br>LOGIN SUCCESSFUL";
+        return;
+    }
+
+    msg.innerHTML =
+        "INVALID CREDENTIALS";
+}
+</script>
+
+</body>
+</html>
