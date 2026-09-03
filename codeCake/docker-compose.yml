@@ -6,5 +6,5 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - ./:/usr/share/nginx/html:ro
+      - ./:/usr/share/nginx/html:z
     container_name: simplelogin-test
