@@ -141,4 +141,4 @@ docker-compose --version
 
 This project is provided as-is for testing purposes.
 
-## Netlify published: https://aquamarine-frangollo-5649fe.netlify.app/
+## Github pages published: [https://selftesterdev.github.io/loginForTestingCodeCake/]
